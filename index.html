@@ -272,8 +272,7 @@
 
         .timeline-line {
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 80px;
             width: 4px;
             height: 100%;
             background: linear-gradient(180deg, #3498db 0%, #2c3e50 100%);
@@ -289,10 +288,6 @@
             animation: fadeInUp 0.6s ease forwards;
         }
 
-        .experience-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
         .experience-item:nth-child(1) { animation-delay: 0.1s; }
         .experience-item:nth-child(2) { animation-delay: 0.2s; }
         .experience-item:nth-child(3) { animation-delay: 0.3s; }
@@ -301,7 +296,7 @@
 
         .experience-marker {
             position: absolute;
-            left: 50%;
+            left: 80px;
             transform: translateX(-50%);
             width: 20px;
             height: 20px;
@@ -317,7 +312,7 @@
         .experience-marker.research { background: #4facfe; }
 
         .experience-content {
-            width: 45%;
+            width: 75%;
             background: #fff;
             border-radius: 15px;
             padding: 30px;
@@ -325,6 +320,7 @@
             position: relative;
             transition: all 0.3s ease;
             border-left: 5px solid transparent;
+            margin-left: 120px;
         }
 
         .experience-content:hover {
@@ -341,26 +337,10 @@
             content: '';
             position: absolute;
             top: 20px;
+            left: -30px;
             width: 0;
             height: 0;
             border: 15px solid transparent;
-        }
-
-        .experience-item:nth-child(odd) .experience-content {
-            margin-left: 5%;
-        }
-
-        .experience-item:nth-child(odd) .experience-content::before {
-            right: -30px;
-            border-left-color: #fff;
-        }
-
-        .experience-item:nth-child(even) .experience-content {
-            margin-right: 5%;
-        }
-
-        .experience-item:nth-child(even) .experience-content::before {
-            left: -30px;
             border-right-color: #fff;
         }
 
