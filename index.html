@@ -12,6 +12,106 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Custom styles for full-screen hero image */
+			#intro {
+				background-image: url('images/damavandmilkyway.jpg');
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				position: relative;
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			
+			#intro::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.4);
+				z-index: 1;
+			}
+			
+			#intro .inner {
+				position: relative;
+				z-index: 2;
+				text-align: center;
+				color: white;
+				max-width: 800px;
+				padding: 2rem;
+			}
+			
+			#intro h1 {
+				font-size: 4rem;
+				margin-bottom: 1rem;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+				color: white;
+			}
+			
+			#intro p {
+				font-size: 1.5rem;
+				margin-bottom: 2rem;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+				color: rgba(255, 255, 255, 0.9);
+			}
+			
+			/* Transparent sidebar */
+			#sidebar {
+				background: rgba(128, 128, 128, 0.2) !important;
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				border-right: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			
+			#sidebar .inner {
+				padding: 2rem 1.5rem;
+			}
+			
+			#sidebar nav ul li a {
+				color: rgba(255, 255, 255, 0.9) !important;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+				transition: all 0.3s ease;
+			}
+			
+			#sidebar nav ul li a:hover {
+				color: white !important;
+				background: rgba(255, 255, 255, 0.1);
+			}
+			
+			/* Adjust button styling for better visibility */
+			#intro .button {
+				background: rgba(255, 255, 255, 0.2);
+				border: 2px solid rgba(255, 255, 255, 0.8);
+				color: white;
+				backdrop-filter: blur(5px);
+				-webkit-backdrop-filter: blur(5px);
+				transition: all 0.3s ease;
+			}
+			
+			#intro .button:hover {
+				background: rgba(255, 255, 255, 0.3);
+				border-color: white;
+				transform: translateY(-2px);
+			}
+			
+			@media (max-width: 768px) {
+				#intro h1 {
+					font-size: 2.5rem;
+				}
+				#intro p {
+					font-size: 1.2rem;
+				}
+				#intro {
+					background-attachment: scroll;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -37,16 +137,13 @@
 			<div id="wrapper">
 
 				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
+					<section id="intro" class="wrapper fullscreen fade-up">
 						<div class="inner">
-							<div class="image-container" style="text-align: center; margin-bottom: 2rem;">
-								<img src="images/damavandmilkyway.jpg" alt="Damavand Milky Way" style="width: 100%; max-width: 800px; height: auto; border-radius: 8px;" />
-							</div>
 							<h1>Mahdi Rastegar</h1>
-							<p>Welcome to my portfolio! I'm passionate about technology, innovation, and creating meaningful solutions.<br />
-							Explore my journey through education, experience, and projects.</p>
+							<p>Technology Enthusiast & Innovation Driver</p>
+							<p>Passionate about creating meaningful solutions and pushing the boundaries of what's possible</p>
 							<ul class="actions">
-								<li><a href="#about" class="button scrolly">Learn More About Me</a></li>
+								<li><a href="#about" class="button scrolly">Explore My Journey</a></li>
 							</ul>
 						</div>
 					</section>
