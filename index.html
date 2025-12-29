@@ -274,6 +274,7 @@
             width: 6px;
             height: 100%;
             background: #3498db;
+            z-index: 1;
         }
 
         .vtimeline-point {
@@ -293,12 +294,14 @@
             float: left;
             z-index: 99;
             margin-left: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .vtimeline-icon i {
-            display: block;
-            font-size: 2em;
-            margin-top: 10px;
+            font-size: 1.5em;
+            margin: 0;
         }
 
         .vtimeline-date {
@@ -343,6 +346,32 @@
 
         .vtimeline-point:last-child .vtimeline-content {
             margin-bottom: 0;
+        }
+
+        /* Fix for connected timeline */
+        .vtimeline-block {
+            position: relative;
+        }
+
+        /* Clearfix for timeline points */
+        .vtimeline-point:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Ensure proper vertical spacing between timeline items */
+        .vtimeline-point {
+            margin-bottom: 50px;
+        }
+
+        /* Make sure the timeline line appears behind the icons */
+        #experience-timeline:before {
+            z-index: 1;
+        }
+
+        .vtimeline-icon {
+            z-index: 10;
         }
 
         /* Experience Mobile Responsive */
