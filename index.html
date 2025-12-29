@@ -249,14 +249,13 @@
 
         /* Experience Section */
         #experience {
-            padding: 50px 15px 20px 15px;
-            border-bottom: 1px solid #dcd9d9;
+            padding: 50px 15px;
             text-align: center;
+            border-bottom: 1px solid #dcd9d9;
         }
 
         #experience h2 {
             color: #374054;
-            margin-bottom: 50px;
         }
 
         #experience-timeline {
@@ -267,51 +266,26 @@
 
         #experience-timeline:before {
             position: absolute;
-            left: 303px;
+            content: '';
             top: 0;
-            content: ' ';
-            display: block;
-            width: 6px;
+            bottom: 0;
+            left: 303px;
+            right: auto;
             height: 100%;
-            background: #3498db;
-            z-index: 1;
+            width: 3px;
+            background: #27AE60;
+            z-index: 0;
         }
 
-        .vtimeline-point {
-            position: relative;
-            display: block;
-            vertical-align: top;
-            margin-bottom: 30px;
-        }
-
-        .vtimeline-icon {
-            position: relative;
-            color: #fff;
-            width: 50px;
-            height: 50px;
-            background: #3498db;
-            border-radius: 50%;
-            float: left;
-            z-index: 99;
-            margin-left: 280px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .vtimeline-icon i {
-            font-size: 1.5em;
-            margin: 0;
-        }
-
-        .vtimeline-date {
-            width: 260px;
-            text-align: right;
+        #experience-timeline:after {
             position: absolute;
-            left: 0;
-            top: 10px;
-            font-weight: 300;
-            color: #374054;
+            content: '';
+            width: 3px;
+            height: 40px;
+            background: #27AE60;
+            background: linear-gradient(to bottom, #27AE60, rgba(39,174,96,0));
+            top: 100%;
+            left: 303px;
         }
 
         .vtimeline-content {
@@ -344,39 +318,77 @@
             margin: 0;
         }
 
-        .vtimeline-point:last-child .vtimeline-content {
-            margin-bottom: 0;
-        }
-
-        /* Fix for connected timeline */
-        .vtimeline-block {
-            position: relative;
-        }
-
-        /* Clearfix for timeline points */
-        .vtimeline-point:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Ensure proper vertical spacing between timeline items */
         .vtimeline-point {
-            margin-bottom: 50px;
-        }
-
-        /* Make sure the timeline line appears behind the icons */
-        #experience-timeline:before {
-            z-index: 1;
+            position: relative;
+            display: block;
+            vertical-align: top;
+            margin-bottom: 30px;
         }
 
         .vtimeline-icon {
-            z-index: 10;
+            position: relative;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            background: #27AE60;
+            border-radius: 50%;
+            float: left;
+            z-index: 99;
+            margin-left: 280px;
         }
 
-        /* Experience Mobile Responsive */
-        @media only screen and (max-width: 1024px) {
-            #experience-timeline:before {
+        .vtimeline-icon i {
+            display: block;
+            font-size: 2em;
+            margin-top: 10px;
+        }
+
+        .vtimeline-date {
+            width: 260px;
+            text-align: right;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            font-weight: 300;
+            color: #374054;
+        }
+
+        .no-js #experience-timeline > div {
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #dcd9d9;
+        }
+
+        .no-js #experience-timeline > div h3 {
+            font-size: 1.5em;
+            font-weight: 300;
+            color: #374054;
+            display: inline-block;
+            margin: 0;
+        }
+
+        .no-js #experience-timeline > div h4 {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: #7e8890;
+            margin: 0 0 15px 0;
+        }
+
+        .no-js #experience-timeline > div p {
+            color: #74808a;
+            font-size: 0.9em;
+            margin: 0;
+        }
+
+        .no-js #experience-timeline:before,
+        .no-js #experience-timeline:after {
+            content: none;
+        }
+
+        @media only screen and (max-width: 750px) {
+            #experience-timeline:before,
+            #experience-timeline:after {
                 left: 23px;
             }
 
@@ -395,17 +407,6 @@
 
             .vtimeline-content {
                 margin-left: 70px;
-            }
-        }
-
-        @media only screen and (max-width: 768px) {
-            #experience-timeline:before, .vtimeline-date, .vtimeline-icon {
-                display: none;
-            }
-
-            .vtimeline-content {
-                margin-left: 0;
-                margin-top: 15px;
             }
         }
 
@@ -1097,15 +1098,7 @@
             .social {
                 text-align: center;
             }
-
-            #experience-timeline:before, .vtimeline-date, .vtimeline-icon {
-                display: none;
-            }
-
-            .vtimeline-content {
-                margin-left: 0;
-            }
-        
+        }
 
         /* Animation */
         @keyframes dropHeader {
