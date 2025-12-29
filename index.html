@@ -617,22 +617,60 @@
 
         .project-image {
             flex-shrink: 0;
-            width: 350px;
-            height: 250px;
+            min-width: 200px;
+            max-width: 450px;
+            min-height: 150px;
+            max-height: 350px;
             border-radius: 6px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
             transition: transform 0.3s ease;
         }
 
         .project-block:hover .project-image img {
             transform: scale(1.05);
+        }
+
+        /* Individual Project Image Sizing */
+        .project-image.large {
+            width: 400px;
+            height: 300px;
+        }
+
+        .project-image.medium {
+            width: 320px;
+            height: 240px;
+        }
+
+        .project-image.small {
+            width: 250px;
+            height: 180px;
+        }
+
+        .project-image.wide {
+            width: 450px;
+            height: 200px;
+        }
+
+        .project-image.tall {
+            width: 280px;
+            height: 350px;
+        }
+
+        .project-image.square {
+            width: 280px;
+            height: 280px;
         }
 
         /* Skills Section */
@@ -1324,9 +1362,22 @@
             }
 
             .project-image {
-                width: 280px;
-                height: 200px;
+                min-width: 200px;
+                max-width: 300px;
+                min-height: 150px;
+                max-height: 250px;
                 margin-bottom: 20px;
+            }
+
+            .project-image.large,
+            .project-image.wide {
+                max-width: 300px;
+                height: 200px;
+            }
+
+            .project-image.tall {
+                width: 200px;
+                max-height: 250px;
             }
 
             .project-info {
@@ -1409,8 +1460,19 @@
 
             .project-image {
                 width: 100%;
-                height: 200px;
+                max-width: 100%;
+                height: auto;
+                min-height: 180px;
+                max-height: 220px;
                 margin-bottom: 20px;
+            }
+
+            .project-image.large,
+            .project-image.wide,
+            .project-image.tall,
+            .project-image.square {
+                width: 100%;
+                height: 200px;
             }
 
             .project-info {
@@ -2014,7 +2076,7 @@
                                 <a href="#" class="btn btn-project-secondary">GitHub</a>
                             </div>
                         </div>
-                        <div class="project-image">
+                        <div class="project-image wide">
                             <img src="images/project1.png" alt="RheoPulse: monitor fluid properties during the pumping pulse" />
                         </div>
                     </div>
@@ -2033,7 +2095,7 @@
                                 <a href="#" class="btn btn-project-secondary">GitHub</a>
                             </div>
                         </div>
-                        <div class="project-image">
+                        <div class="project-image wide">
                             <img src="images/pic05.jpg" alt="Sound-Driven Energy Harvesting" />
                         </div>
                     </div>
@@ -2052,7 +2114,7 @@
                                 <a href="#" class="btn btn-project-secondary">Demo</a>
                             </div>
                         </div>
-                        <div class="project-image">
+                        <div class="project-image medium">
                             <img src="images/pic04.jpg" alt="Self-Driving Laboratory" />
                         </div>
                     </div>
