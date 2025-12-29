@@ -417,6 +417,54 @@
         .vtimeline-content {
             padding: 30px;
             position: relative;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .experience-logo {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 12px;
+            border: 2px solid #ecf0f1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .experience-logo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border-color: #3498db;
+        }
+
+        .experience-logo img {
+            max-width: 70px;
+            max-height: 70px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+
+        .experience-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .logo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 8px;
         }
 
         .vtimeline-content h3 {
@@ -559,6 +607,19 @@
 
             .vtimeline-content {
                 padding: 25px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .experience-logo {
+                width: 60px;
+                height: 60px;
+                align-self: center;
+            }
+
+            .experience-logo img {
+                max-width: 50px;
+                max-height: 50px;
             }
 
             .vtimeline-content h3 {
@@ -603,6 +664,19 @@
 
             .vtimeline-content {
                 padding: 20px 15px;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .experience-logo {
+                width: 50px;
+                height: 50px;
+                align-self: center;
+            }
+
+            .experience-logo img {
+                max-width: 40px;
+                max-height: 40px;
             }
 
             .vtimeline-content h3 {
@@ -1494,11 +1568,15 @@
                     <div class="vtimeline-block">
                         <span class="vtimeline-date">Apr. 2025 – Present</span>
                         <div class="vtimeline-content">
-                            <div class="experience-header-inline">
-                                <h3>Acceleration Consortium</h3>
-                                <span class="experience-duration">Apr. 2025 – Present</span>
+                            <div class="experience-logo">
+                                <img src="images/ac_logo.png" alt="Acceleration Consortium Logo">
                             </div>
-                            <h4>Postdoctoral Fellow</h4>
+                            <div class="experience-content">
+                                <div class="experience-header-inline">
+                                    <h3>Acceleration Consortium</h3>
+                                    <span class="experience-duration">Apr. 2025 – Present</span>
+                                </div>
+                                <h4>Postdoctoral Fellow</h4>
                             <p class="experience-description">Generative AI and Machine Learning for Materials Discovery</p>
                             <ul>
                                 <li>Engineered self-driving laboratory by integrating custom-fabricated hardware with machine learning 
@@ -1513,6 +1591,7 @@
                                 <span class="skill-tag">Materials Science</span>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1523,11 +1602,15 @@
                     <div class="vtimeline-block">
                         <span class="vtimeline-date">Jan. 2024 – Apr. 2025</span>
                         <div class="vtimeline-content">
-                            <div class="experience-header-inline">
-                                <h3>University Health Network (UHN)</h3>
-                                <span class="experience-duration">Jan. 2024 – Apr. 2025</span>
+                            <div class="experience-logo">
+                                <img src="images/uhn_logo.png" alt="University Health Network Logo">
                             </div>
-                            <h4>Research Assistant</h4>
+                            <div class="experience-content">
+                                <div class="experience-header-inline">
+                                    <h3>University Health Network (UHN)</h3>
+                                    <span class="experience-duration">Jan. 2024 – Apr. 2025</span>
+                                </div>
+                                <h4>Research Assistant</h4>
                             <p class="experience-description">2024 - 2025</p>
                             <ul>
                                 <li>Engineered clinical healthcare solutions by integrating solid/fluid mechanics and machine learning simulations 
@@ -1551,11 +1634,15 @@
                     <div class="vtimeline-block">
                         <span class="vtimeline-date">Jan. 2021 – Dec. 2024</span>
                         <div class="vtimeline-content">
-                            <div class="experience-header-inline">
-                                <h3>University of Toronto</h3>
-                                <span class="experience-duration">Jan. 2021 – Dec. 2024</span>
+                            <div class="experience-logo">
+                                <img src="images/TSMART_logo.png" alt="University of Toronto Smart Materials Lab Logo">
                             </div>
-                            <h4>Research Assistant - PhD</h4>
+                            <div class="experience-content">
+                                <div class="experience-header-inline">
+                                    <h3>University of Toronto</h3>
+                                    <span class="experience-duration">Jan. 2021 – Dec. 2024</span>
+                                </div>
+                                <h4>Research Assistant - PhD</h4>
                             <p class="experience-description">Smart Materials & Structures Lab</p>
                             <ul>
                                 <li>Conducted comprehensive research on multifunctional porous fluoropolymer films for triboelectric nanogenerator applications</li>
@@ -1573,6 +1660,7 @@
                                 <span class="skill-tag">Research Leadership</span>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1583,11 +1671,17 @@
                     <div class="vtimeline-block">
                         <span class="vtimeline-date">Mar. 2019 – Dec. 2020</span>
                         <div class="vtimeline-content">
-                            <div class="experience-header-inline">
-                                <h3>TECHNE KIROW GmbH</h3>
-                                <span class="experience-duration">Mar. 2019 – Dec. 2020</span>
+                            <div class="experience-logo">
+                                <div class="logo-placeholder">
+                                    <i class="fa fa-industry" style="font-size: 2em; color: #3498db;"></i>
+                                </div>
                             </div>
-                            <h4>Mechanical Engineer</h4>
+                            <div class="experience-content">
+                                <div class="experience-header-inline">
+                                    <h3>TECHNE KIROW GmbH</h3>
+                                    <span class="experience-duration">Mar. 2019 – Dec. 2020</span>
+                                </div>
+                                <h4>Mechanical Engineer</h4>
                             <p class="experience-description">Industrial Automation and Process Optimization</p>
                             <ul>
                                 <li>Designed and optimized industrial automation systems for manufacturing processes</li>
@@ -1603,6 +1697,7 @@
                                 <span class="skill-tag">Technical Documentation</span>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1613,11 +1708,15 @@
                     <div class="vtimeline-block">
                         <span class="vtimeline-date">Sep. 2013 – Aug. 2019</span>
                         <div class="vtimeline-content">
-                            <div class="experience-header-inline">
-                                <h3>University of Tehran</h3>
-                                <span class="experience-duration">Sep. 2013 – Aug. 2019</span>
+                            <div class="experience-logo">
+                                <img src="images/University_of_Tehran_logo.png" alt="University of Tehran Logo">
                             </div>
-                            <h4>Research Assistant</h4>
+                            <div class="experience-content">
+                                <div class="experience-header-inline">
+                                    <h3>University of Tehran</h3>
+                                    <span class="experience-duration">Sep. 2013 – Aug. 2019</span>
+                                </div>
+                                <h4>Research Assistant</h4>
                             <p class="experience-description">Solar-Electrical Vehicle Project</p>
                             <ul>
                                 <li>Designed and optimized renewable energy systems for electric vehicle applications</li>
