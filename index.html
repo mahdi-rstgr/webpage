@@ -622,33 +622,139 @@
         }
 
         .publication-block {
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-            padding: 15px;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            padding: 25px;
             border: 1px solid #dcd9d9;
             background: #fff;
-            border-radius: 4px;
+            border-radius: 8px;
             text-align: left;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
         }
 
-        .publication-block h3 {
-            font-weight: 500;
-            font-size: 1.3em;
+        .publication-block:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .publication-block.conference {
+            border-left: 4px solid #3498db;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 1.4em;
             color: #374054;
-            margin: 0 0 5px 0;
+            margin: 0 0 12px 0;
+            line-height: 1.3;
         }
 
-        .publication-block h4 {
-            color: #74808a;
-            font-weight: 500;
+        .pub-authors {
+            color: #555;
             font-size: 1em;
-            margin: 0 0 15px 0;
+            margin-bottom: 8px;
+            font-weight: 500;
         }
 
-        .publication-block p {
+        .pub-authors strong {
+            color: #374054;
+            font-weight: 700;
+        }
+
+        .pub-journal {
+            color: #74808a;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+
+        .pub-journal em {
+            color: #27AE60;
+            font-weight: 600;
+        }
+
+        .pub-doi {
             color: #74808a;
             font-size: 0.9em;
-            margin: 0 0 15px 0;
+            margin-bottom: 15px;
+        }
+
+        .pub-doi a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .pub-doi a:hover {
+            text-decoration: underline;
+        }
+
+        .pub-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-pub {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #27AE60;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-pub:hover {
+            background: #219a52;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        .btn-pub-secondary {
+            display: inline-block;
+            padding: 8px 16px;
+            background: transparent;
+            color: #3498db;
+            text-decoration: none;
+            border: 2px solid #3498db;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-pub-secondary:hover {
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        .publication-note {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .publication-note p {
+            color: #495057;
+            margin: 0;
+            font-size: 0.95em;
+        }
+
+        .publication-note a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .publication-note a:hover {
+            text-decoration: underline;
         }
 
         /* Awards Section */
@@ -1301,22 +1407,75 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <!-- Add your publications here - Template format -->
                     <div class="publication-block">
-                        <h3>Publication Title 1</h3>
-                        <h4>Journal/Conference Name, Year</h4>
-                        <p>
-                            Brief description of your publication, its significance, and key contributions to the field.
-                        </p>
-                        <a href="#" class="btn">View Publication</a>
+                        <h3 class="pub-title">Multifunctional Porous Fluoropolymer Films for Triboelectric Nanogenerator Applications</h3>
+                        <div class="pub-authors"><strong>M.M. Rastegardoost</strong>, H. Naguib, C. Park</div>
+                        <div class="pub-journal">
+                            <em>Journal of Materials Science & Technology</em>, 2024
+                        </div>
+                        <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.jmst.2024.xxxxx" target="_blank">10.1016/j.jmst.2024.xxxxx</a></div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1016/j.jmst.2024.xxxxx" target="_blank" class="btn btn-pub">View Article</a>
+                            <a href="#" target="_blank" class="btn btn-pub-secondary">PDF</a>
+                        </div>
                     </div>
-                    
+
                     <div class="publication-block">
-                        <h3>Publication Title 2</h3>
-                        <h4>Journal/Conference Name, Year</h4>
-                        <p>
-                            Brief description of your publication, its significance, and key contributions to the field.
-                        </p>
-                        <a href="#" class="btn">View Publication</a>
+                        <h3 class="pub-title">Advanced Triboelectric Energy Harvesting: Materials and Device Design</h3>
+                        <div class="pub-authors"><strong>M.M. Rastegardoost</strong>, A. Colleague, H. Naguib</div>
+                        <div class="pub-journal">
+                            <em>Nano Energy</em>, 2023
+                        </div>
+                        <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.nanoen.2023.xxxxx" target="_blank">10.1016/j.nanoen.2023.xxxxx</a></div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1016/j.nanoen.2023.xxxxx" target="_blank" class="btn btn-pub">View Article</a>
+                            <a href="#" target="_blank" class="btn btn-pub-secondary">PDF</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-block">
+                        <h3 class="pub-title">Self-Powered Sensors Based on Triboelectric Nanogenerators</h3>
+                        <div class="pub-authors">A. Coauthor, <strong>M.M. Rastegardoost</strong>, C. Park</div>
+                        <div class="pub-journal">
+                            <em>ACS Applied Materials & Interfaces</em>, 2023
+                        </div>
+                        <div class="pub-doi">DOI: <a href="https://doi.org/10.1021/acsami.xxxxx" target="_blank">10.1021/acsami.xxxxx</a></div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1021/acsami.xxxxx" target="_blank" class="btn btn-pub">View Article</a>
+                            <a href="#" target="_blank" class="btn btn-pub-secondary">PDF</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-block">
+                        <h3 class="pub-title">Porous Polymer-Based Triboelectric Materials: Fabrication and Performance</h3>
+                        <div class="pub-authors"><strong>M.M. Rastegardoost</strong>, B. Researcher, H. Naguib</div>
+                        <div class="pub-journal">
+                            <em>Materials & Design</em>, 2022
+                        </div>
+                        <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.matdes.2022.xxxxx" target="_blank">10.1016/j.matdes.2022.xxxxx</a></div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1016/j.matdes.2022.xxxxx" target="_blank" class="btn btn-pub">View Article</a>
+                            <a href="#" target="_blank" class="btn btn-pub-secondary">PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Conference Proceedings -->
+                    <div class="publication-block conference">
+                        <h3 class="pub-title">Machine Learning Approaches for Energy Harvesting Optimization</h3>
+                        <div class="pub-authors"><strong>M.M. Rastegardoost</strong>, H. Naguib</div>
+                        <div class="pub-journal">
+                            <em>Proceedings of IEEE International Conference on MEMS</em>, 2022
+                        </div>
+                        <div class="pub-doi">DOI: <a href="https://doi.org/10.1109/MEMS.2022.xxxxx" target="_blank">10.1109/MEMS.2022.xxxxx</a></div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/MEMS.2022.xxxxx" target="_blank" class="btn btn-pub">View Article</a>
+                            <a href="#" target="_blank" class="btn btn-pub-secondary">PDF</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-note">
+                        <p><i class="fa fa-info-circle"></i> <strong>Please replace the above template content with your actual publications from your <a href="https://scholar.google.ca/citations?user=tWmo_h0AAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</strong></p>
                     </div>
                 </div>
             </div>
