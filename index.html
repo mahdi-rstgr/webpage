@@ -385,23 +385,33 @@
 
         .vtimeline-date {
             position: absolute;
-            top: -15px;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            top: -20px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9em;
-            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
-            z-index: 5;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1.1em;
+            box-shadow: 0 8px 20px rgba(44, 62, 80, 0.4);
+            z-index: 15;
+            border: 3px solid #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .vtimeline-date:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(44, 62, 80, 0.5);
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
         }
 
         .vtimeline-point:nth-child(odd) .vtimeline-date {
-            right: 20px;
+            right: 25px;
         }
 
         .vtimeline-point:nth-child(even) .vtimeline-date {
-            left: 20px;
+            left: 25px;
         }
 
         .vtimeline-content {
@@ -538,9 +548,13 @@
             .vtimeline-date {
                 position: static;
                 display: inline-block;
-                margin: 0 0 15px 0;
+                margin: 0 0 20px 0;
                 left: auto !important;
                 right: auto !important;
+                font-size: 1em;
+                padding: 10px 20px;
+                text-align: center;
+                width: fit-content;
             }
 
             .vtimeline-content {
@@ -1480,9 +1494,12 @@
                     <div class="vtimeline-block">
                         <span class="vtimeline-date">Apr. 2025 – Present</span>
                         <div class="vtimeline-content">
-                            <h3>Acceleration Consortium</h3>
+                            <div class="experience-header-inline">
+                                <h3>Acceleration Consortium</h3>
+                                <span class="experience-duration">Apr. 2025 – Present</span>
+                            </div>
                             <h4>Postdoctoral Fellow</h4>
-                            <p class="experience-description">2025 - Present</p>
+                            <p class="experience-description">Generative AI and Machine Learning for Materials Discovery</p>
                             <ul>
                                 <li>Engineered self-driving laboratory by integrating custom-fabricated hardware with machine learning 
 									optimization, utilizing advanced imaging and inverse heat transfer methods to automate high-throughput synthesis and characterization.</li>
@@ -1506,9 +1523,12 @@
                     <div class="vtimeline-block">
                         <span class="vtimeline-date">Jan. 2024 – Apr. 2025</span>
                         <div class="vtimeline-content">
-                            <h3>University Health Network (UHN)</h3>
+                            <div class="experience-header-inline">
+                                <h3>University Health Network (UHN)</h3>
+                                <span class="experience-duration">Jan. 2024 – Apr. 2025</span>
+                            </div>
                             <h4>Research Assistant</h4>
-                            <p class="experience-description">2024 - 2025/p>
+                            <p class="experience-description">2024 - 2025</p>
                             <ul>
                                 <li>Engineered clinical healthcare solutions by integrating solid/fluid mechanics and machine learning simulations 
 									for the autonomous optimization and translational development of advanced medical devices.</li>
@@ -1531,7 +1551,10 @@
                     <div class="vtimeline-block">
                         <span class="vtimeline-date">Jan. 2021 – Dec. 2024</span>
                         <div class="vtimeline-content">
-                            <h3>University of Toronto</h3>
+                            <div class="experience-header-inline">
+                                <h3>University of Toronto</h3>
+                                <span class="experience-duration">Jan. 2021 – Dec. 2024</span>
+                            </div>
                             <h4>Research Assistant - PhD</h4>
                             <p class="experience-description">Smart Materials & Structures Lab</p>
                             <ul>
@@ -1560,7 +1583,10 @@
                     <div class="vtimeline-block">
                         <span class="vtimeline-date">Mar. 2019 – Dec. 2020</span>
                         <div class="vtimeline-content">
-                            <h3>TECHNE KIROW GmbH</h3>
+                            <div class="experience-header-inline">
+                                <h3>TECHNE KIROW GmbH</h3>
+                                <span class="experience-duration">Mar. 2019 – Dec. 2020</span>
+                            </div>
                             <h4>Mechanical Engineer</h4>
                             <p class="experience-description">Industrial Automation and Process Optimization</p>
                             <ul>
@@ -1587,7 +1613,10 @@
                     <div class="vtimeline-block">
                         <span class="vtimeline-date">Sep. 2013 – Aug. 2019</span>
                         <div class="vtimeline-content">
-                            <h3>University of Tehran</h3>
+                            <div class="experience-header-inline">
+                                <h3>University of Tehran</h3>
+                                <span class="experience-duration">Sep. 2013 – Aug. 2019</span>
+                            </div>
                             <h4>Research Assistant</h4>
                             <p class="experience-description">Solar-Electrical Vehicle Project</p>
                             <ul>
