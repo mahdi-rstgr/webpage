@@ -238,13 +238,51 @@
             border-bottom: 1px solid #dcd9d9;
         }
 
+        #about .container {
+            max-width: 1000px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            flex-shrink: 0;
+        }
+
+        .about-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border: 4px solid #fff;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 0;
+        }
+
         #about h2 {
             color: #374054;
+            margin-bottom: 20px;
+            font-size: 2.2em;
         }
 
         #about p {
             color: #74808a;
-            margin: 0;
+            margin: 0 0 15px 0;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        #about p:last-child {
+            margin-bottom: 0;
         }
 
         /* Experience Section */
@@ -1521,6 +1559,18 @@
                 text-align: center;
             }
 
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .about-image img {
+                width: 150px;
+                height: 150px;
+            }
+
             .project-info {
                 position: relative;
                 margin: 0;
@@ -1622,24 +1672,28 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        I'm a Postdoctoral Fellow at
-						<a href="https://acceleration.utoronto.ca/">Acceleration Consortium</a>.
-						Prior to that, I obtained my Ph.D. in Mechanical Engineering at the University of Toronto co-supervised by
-						<a href="https://mse.utoronto.ca/faculty-staff/professors/naguib/">Prof. Hani Naguib</a>
-						and 
-						<a href="https://www.mie.utoronto.ca/faculty_staff/park/">Prof. Chul Park</a>
-						.
-					</p>
-					<br>
-					<p>
-                        My work spans mechanical engineering in solids and fluids, leveraging AI, machine learning, and data 
-						science to tackle challenges in design, materials, and physics-informed modeling.
-                    </p>
+                <div class="col-md-12">
+                    <div class="about-content">
+                        <div class="about-image">
+                            <img src="images/Mahdi_Rastegar.jpg" alt="Mahdi Rastegar" />
+                        </div>
+                        <div class="about-text">
+                            <h2 class="heading">About Me</h2>
+                            <p>
+                                I'm a Postdoctoral Fellow at
+                                <a href="https://acceleration.utoronto.ca/">Acceleration Consortium</a>.
+                                Prior to that, I obtained my Ph.D. in Mechanical Engineering at the University of Toronto co-supervised by
+                                <a href="https://mse.utoronto.ca/faculty-staff/professors/naguib/">Prof. Hani Naguib</a>
+                                and 
+                                <a href="https://www.mie.utoronto.ca/faculty_staff/park/">Prof. Chul Park</a>
+                                .
+                            </p>
+                            <p>
+                                My work spans mechanical engineering in solids and fluids, leveraging AI, machine learning, and data 
+                                science to tackle challenges in design, materials, and physics-informed modeling.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
