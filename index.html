@@ -569,17 +569,18 @@
         .project-block {
             max-width: 1100px;
             margin: 0 auto 40px auto;
-            padding: 30px;
+            padding: 25px;
             border: 1px solid #dcd9d9;
+            border-left: 4px solid #4285F4;
             background: #fff;
             border-radius: 8px;
             text-align: left;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: box-shadow 0.3s ease;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 40px;
-            min-height: 300px;
+            min-height: 250px;
             position: relative;
             overflow: hidden;
         }
@@ -620,6 +621,42 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
+        }
+
+        .project-technologies {
+            margin: 15px 0;
+        }
+
+        .project-technologies h4 {
+            color: #374054;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #4285F4 0%, #34A853 100%);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 500;
+            border: none;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
         }
 
         .btn-project {
@@ -2242,7 +2279,16 @@
                             <h3 class="project-title">RheoPulse: Monitor Fluid Properties During the Pumping Pulse</h3>
                             <div class="project-description">
                                 <p>Developed an advanced smart peristaltic pump with viscosity-measuring capabilities.</p>
-                                <p><strong>Technologies:</strong> Physics-informed modeling, Fluid Dynamics (CFD), Sensor integration, Machine Learning, Data Science</p>
+                                <div class="project-technologies">
+                                    <h4>Technologies</h4>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Physics-informed modeling</span>
+                                        <span class="tech-tag">Fluid Dynamics (CFD)</span>
+                                        <span class="tech-tag">Sensor integration</span>
+                                        <span class="tech-tag">Machine Learning</span>
+                                        <span class="tech-tag">Data Science</span>
+                                    </div>
+                                </div>
                                 <p><strong>Results:</strong> Estimating viscosity of liquids in real-time within the range of 1.0 to 12,500 cP with accuracy of ±6%</p>
                             </div>
                             <div class="project-actions">
@@ -2260,8 +2306,20 @@
                             <h3 class="project-title">Data-Driven Rheology Analysis Platform for Self-Driving Laboratory Automation in Material Discovery</h3>
                             <div class="project-description">
                                 <p>Developed a data-driven rheology analysis platform integrated with self-driving laboratory automation for accelerated material discovery in pharma applications.</p>
-                                <p><strong>Technologies:</strong> Data Science, Prototyping, GD&T, Embedded Systems (ESP32, Raspberry Pi, Arduino), 3D-Printing, Machine Learning</p>
-                                <p><strong>Results:</strong> Rheology analysis automation (18 samples per setup) and accelerated material discovery </p>
+                                <div class="project-technologies">
+                                    <h4>Technologies</h4>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Data Science</span>
+                                        <span class="tech-tag">Prototyping</span>
+                                        <span class="tech-tag">GD&T</span>
+                                        <span class="tech-tag">Embedded Systems (ESP32)</span>
+                                        <span class="tech-tag">Raspberry Pi</span>
+                                        <span class="tech-tag">Arduino</span>
+                                        <span class="tech-tag">3D-Printing</span>
+                                        <span class="tech-tag">Machine Learning</span>
+                                    </div>
+                                </div>
+                                <p><strong>Results:</strong> Rheology analysis automation (18 samples per setup) and accelerated material discovery</p>
                             </div>
                             <div class="project-actions">
                                 <a href="#" class="btn btn-project">View Details</a>
@@ -2311,7 +2369,16 @@
 									model using Python and TensorFlow to infer flow behavior for uncalibrated fluids. Utilized advanced imaging and inverse 
 									heat transfer methods to automate synthesis and characterization.
 								</p>
-                                <p><strong>Technologies:</strong> Machine Learning, Computer Vision, Liquid Handling, Laboratory Automation, Prototyping</p>
+                                <div class="project-technologies">
+                                    <h4>Technologies</h4>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Machine Learning</span>
+                                        <span class="tech-tag">Computer Vision</span>
+                                        <span class="tech-tag">Liquid Handling</span>
+                                        <span class="tech-tag">Laboratory Automation</span>
+                                        <span class="tech-tag">Prototyping</span>
+                                    </div>
+                                </div>
                                 <p><strong>Results:</strong> Liquid handling and powder dispenser with accuracy of ±0.1 gram. 5x faster synthesis formulation</p>
                             </div>
                             <div class="project-actions">
@@ -2329,7 +2396,23 @@
                             <h3 class="project-title">Crack Detector Triboelectric Nanogenerator (CD-TENG)</h3>
                             <div class="project-description">
                                 <p>Developed an ultra-lightweight aerogel-fibrous material with high thermal stability and boosted triboelectricity for crack detection in harsh environments.</p>
-                                <p><strong>Technologies:</strong> Material Synthesis, Porous Composite, Fibrous, Aerogel, Material Characterization (SEM, XRD, FTIR, DMA, WCA, TGA), Dielectrics</p>
+                                <div class="project-technologies">
+                                    <h4>Technologies</h4>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Material Synthesis</span>
+                                        <span class="tech-tag">Porous Composite</span>
+                                        <span class="tech-tag">Fibrous Materials</span>
+                                        <span class="tech-tag">Aerogel</span>
+                                        <span class="tech-tag">Material Characterization</span>
+                                        <span class="tech-tag">SEM</span>
+                                        <span class="tech-tag">XRD</span>
+                                        <span class="tech-tag">FTIR</span>
+                                        <span class="tech-tag">DMA</span>
+                                        <span class="tech-tag">WCA</span>
+                                        <span class="tech-tag">TGA</span>
+                                        <span class="tech-tag">Dielectrics</span>
+                                    </div>
+                                </div>
                                 <p><strong>Results:</strong> Single Droplet Output: 7.9 V and 0.79 μA (at 30 cm height / 70° incline). Peak Power Density: 33 mW/m² under optimized parameters. Optimized Conditions: 15 cm droplet height, 50° substrate slope, and 20 MΩ load. Primary Application: Lightweight, self-powered sensors for real-time crack detection in extreme environments.</p>
                             </div>
                             <div class="project-actions">
@@ -2347,7 +2430,24 @@
                             <h3 class="project-title">Sound Aerogel-based Sensor Triboelectric Nanogenerator (SAS-TENG)</h3>
                             <div class="project-description">
                                 <p>Developed a ultra-lightweight aerogel composites for sound-driven triboelectric nanogenerator.</p>
-                                <p><strong>Technologies:</strong> Material Synthesis, Porous Composite, Sol-Gel Processing, Aerogel, Nanoparticle, Helmholtz Resonator, Self-Powered Sensing, Material Characterization (SEM, XRD, FTIR, DMA, WCA, TGA)</p>
+                                <div class="project-technologies">
+                                    <h4>Technologies</h4>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Material Synthesis</span>
+                                        <span class="tech-tag">Porous Composite</span>
+                                        <span class="tech-tag">Sol-Gel Processing</span>
+                                        <span class="tech-tag">Aerogel</span>
+                                        <span class="tech-tag">Nanoparticle</span>
+                                        <span class="tech-tag">Helmholtz Resonator</span>
+                                        <span class="tech-tag">Self-Powered Sensing</span>
+                                        <span class="tech-tag">SEM</span>
+                                        <span class="tech-tag">XRD</span>
+                                        <span class="tech-tag">FTIR</span>
+                                        <span class="tech-tag">DMA</span>
+                                        <span class="tech-tag">WCA</span>
+                                        <span class="tech-tag">TGA</span>
+                                    </div>
+                                </div>
                                 <p><strong>Results:</strong> Peak Power Density: 307.5 mW/m². Specific Power Output: 15.37 mW/g, enabled by an ultra-low density of 0.25 g/cm³. Acoustic Sensing Range: 40 dB to 120 dB. Voltage Response: 1.05 V to 4.85 V across its sensing range. Mechanism: Utilizes a contact-and-separation mode TENG activated by acoustic-induced mobilization of a lightweight, flexible aerogel.</p>
                             </div>
                             <div class="project-actions">
@@ -2463,7 +2563,7 @@
                             <div class="project-description">
                                 <p>Designed and prototyped a lightweight EV platform using SolidWorks and ANSYS. Applied DFM/GD&T to bridge the gap between high-fidelity FEA simulations and physical manufacturing.</p>
                                 <p><strong>Technologies:</strong> FEM, SolidWorks, ANSYS, MATLAB, GD&T, DFM/DAM, Troubleshooting, Prototyping, Manufacturing, Assembly</p>
-                                <p><strong>Results:</strong> Achieved a 23% weight reduction while maintaining a 2.1 Factor of Safety. Boosted torsional rigidity by 12% ($1,450 \text{ Nm/deg}$). Maintained assembly tolerances within $\pm$0.5 mm for all hard-points.</p>
+                                <p><strong>Results:</strong> Achieved a 23% weight reduction while maintaining a 2.1 Factor of Safety. Boosted torsional rigidity by 12% (1,450 Nm/deg). Maintained assembly tolerances within ±0.5 mm for all hard-points.</p>
                             </div>
 
                         </div>
@@ -2478,7 +2578,7 @@
                             <div class="project-description">
                                 <p>The Persian Gazelle IV (PGSC IV) is the first four-passenger, family-sized solar-electric vehicle in the Middle East, designed at the University of Tehran. A multidisciplinary team of 45 students engineered it to bridge the gap between high-efficiency race cars and practical city vehicles, focusing on aerodynamic optimization and lightweight composite structures.</p>
                                 <p><strong>Technologies:</strong> SolidWorks (CAD), ANSYS (FEA & CFD for drag reduction), MATLAB (Energy performance simulation), Lithium-ion battery pack</p>
-                                <p><strong>Results:</strong> Achieved a low drag coefficient ($C_d$) of 0.20 and energy consumption of 21 Wh/km (at 50 km/h). Maximum speed of 110 km/h with a solar-assisted range of up to 750 km on a full charge. Total weight of 620 kg (including 4 passengers) with a 1.1 kW solar array and a 16.1 kWh battery capacity.</p>
+                                <p><strong>Results:</strong> Achieved a low drag coefficient (C_d) of 0.20 and energy consumption of 21 Wh/km (at 50 km/h). Maximum speed of 110 km/h with a solar-assisted range of up to 750 km on a full charge. Total weight of 620 kg (including 4 passengers) with a 1.1 kW solar array and a 16.1 kWh battery capacity.</p>
                             </div>
 
                         </div>
